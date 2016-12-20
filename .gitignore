@@ -1,0 +1,6 @@
+.git/
+.idea/
+storage/
+Homestead.yaml
+Homestead.json
+.env
