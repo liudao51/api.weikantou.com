@@ -5,7 +5,7 @@
  * Date: 16/10/21
  * Time: 11:25
  */
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Wap;
 
 use App\Http\Controllers\Controller;
 use App\Libs\ErrorInfo;
@@ -174,17 +174,9 @@ class BController extends Controller
         }
 
         $result = [
-            'statusCode' => $error->statusCode . '',
-            'responseBody' => [
-                'responseInfo' => [
-                    'reasons' => [
-                        'code' => $error->errorCode . '',
-                        'type' => $error->errorType . '',
-                        'msg' => $error->errorMsg . ''
-                    ]
-                ],
-                'data' => $data
-            ]
+            'errcode' => $error->errorCode . '',
+            'errmsg' => $error->errorMsg . '',
+            'data' => $data
         ];
 
         return $result;

@@ -21,7 +21,7 @@ class ResponseError
     const ERROR_TYPE_WARNING = '2';
     const ERROR_TYPE_FATAL = '3';
 
-    public $statusCode;
+    public $statusCode = 200;
     public $errorCode;
     public $errorType = self::ERROR_TYPE_FATAL;
     public $errorMsg;
